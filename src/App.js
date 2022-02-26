@@ -1,14 +1,15 @@
 
 import './App.css';
 
-import React, {Fragment, useEffect} from 'react'
+import React, {Fragment, useEffect, useState} from 'react'
 
 import { MapContainer, Marker, Popup, TileLayer } from 'react-leaflet'
 
-import {Grid, Box, AppBar, Typography, Container} from '@mui/material'
+import {Grid, Box, AppBar, Typography, Container, Button} from '@mui/material'
 
 function App() {
 
+  let [date, setDate] = useState('')
   let getLocation = () => {
     if (navigator.geolocation){
       navigator.geolocation.getCurrentPosition(showPosition)
@@ -25,9 +26,10 @@ function App() {
 
   useEffect(() => {
     getLocation()
+    let now = new Date()
+    setDate(now.toString())
+  
   }, [])
-
-
 
 
   return (
@@ -35,7 +37,7 @@ function App() {
       
       <AppBar sx={{mt: 6, width: '20%', p: 5, mx: 5, borderRadius: '15px', bgcolor: 'orange'}}>
         <Typography sx={{textAlign: 'center', color: 'white', fontWeight: 800}} variant="h5">
-          Current Location
+          Location & Time
         </Typography>
         <br/>
         <Typography sx={{textAlign: 'center', color: 'white', fontWeight: 700}} variant="h6">
@@ -45,9 +47,14 @@ function App() {
         <Typography sx={{textAlign: 'center', color: 'white', fontWeight: 700}} variant="h6">
           Latitude: 45.501690
         </Typography>
+        <br/>
         <Typography sx={{textAlign: 'center', color: 'white', fontWeight: 700}} variant="h6">
-         
+         {date}
         </Typography>
+        <br/>
+        <Button variant='contained'>
+          Find Route
+        </Button>
    
       </AppBar>
    

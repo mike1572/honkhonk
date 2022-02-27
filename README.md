@@ -16,7 +16,7 @@ This project's intent is to help truckers find the optimal loads based on curren
 This project assumes that you already have `Node ^14.17.6` & `npm ^6.14.15`. If you do not, please download them from [the official website](https://nodejs.org/en/download/)
 Here are a couple of steps that you can follow to quickly get started with the project.
 
-1. Clone the repository: `git clone https://github.com/mike1572/face.git`
+1. Clone the repository: `git clone https://github.com/mike1572/honkhonk.git`
 2. Install the project dependencies by running `npm install` inside the cloned directory
 3. Run `npm start` to start your own local development environment! Alternatively, here are some more commands available:
 

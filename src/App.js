@@ -16,11 +16,8 @@ import Backdrop from '@mui/material/Backdrop';
 import CircularProgress from '@mui/material/CircularProgress';
 import Slide from '@mui/material/Slide'
 import LocalShippingIcon from '@mui/icons-material/LocalShipping';
-import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
-import CircleOutlinedIcon from '@mui/icons-material/CircleOutlined';
 import IconButton from '@mui/material/IconButton';
 import Tooltip from '@mui/material/Tooltip';
-import IconI from '@mui/material/Icon'
 import TextField from '@mui/material/TextField';
 import AdapterDateFns from '@mui/lab/AdapterDateFns';
 import LocalizationProvider from '@mui/lab/LocalizationProvider';
@@ -28,12 +25,7 @@ import DateTimePicker from '@mui/lab/DateTimePicker';
 
 import logo from './location.svg'
 
-let colors = ['blue', 'red', 'orange', 'black', 'lime', 'purple', 'yellow', 'grey', 'white', 'darkblue']
-
 function App() {
-
-  let [filePresent, setFilePresent] = useState(false)
-  let [file, setFile] = useState('')
 
   let [info, setInfo] = useState([])
 
@@ -53,65 +45,6 @@ function App() {
     iconSize: [35, 35]
   })
 
-
-  // let handleFile = (e) => {
-  //   console.log(e.target.files[0])
-  //   if (e.target.files[0]){
-  //     setFilePresent(true)
-  //     setFile(e.target.files[0])
-  //     var reader = new FileReader();
-  //     reader.onload = onReaderLoad;
-  //     reader.readAsText(e.target.files[0]);
-  //     setButtonDisabled(false)
-  //   } else {
-  //     setFilePresent(false)
-  //     setButtonDisabled(true)
-  //   }
-      
-  // }
-
-  // function onReaderLoad(event){
-  //   console.log(event.target.result);
-  //   var obj = JSON.parse(event.target.result);
-  //   console.log(obj)
-  // }
-
-  // let Form = () => (
-  //   <Box component="form" noValidate autoComplete="off" sx={{textAlign: 'center', m: 1, mb: 4}}>
-  //     <Button
-  //       variant="contained"
-  //       component="label"
-  //       color="secondary"    
-  //       >
-  //       Input Trip Plan
-  //       <input
-  //         type="file"
-  //         accept='.json'
-  //         id="fileUpload"
-  //         onChange={handleFile}
-  //         hidden
-  //       />
-  //   </Button>
-    
-  //   <IconI sx={{ ml: 1}}>
-  //   {filePresent? (
-  //           <CheckCircleOutlineIcon fontSize='medium' color="success"/>
-  //       ): (
-  //           <CircleOutlinedIcon fontSize='medium' color="success"/>
-  //       )
-  //   }
-  //   </IconI>
-  //   </Box>
-  // )
-
-
-  /*
-  "input_trip_id": 201,
-  "start_latitude": 35.929790,
-  "start_longitude": -89.892014,
-  "start_time": "2022-02-28 00:00:00",
-  "max_destination_time": "2022-02-29 12:00:00"
-  */
   useEffect(() => {
 
     if (tripId === '' || latitude === '' || longitude === "" || startTime === "" || maxDestinationTime === ""){
@@ -294,33 +227,7 @@ function App() {
         <Typography sx={{textAlign: 'center', color: 'white', fontWeight: 800, mb: 2}} variant="h5">
           Trip Request
         </Typography>
-        {/* <br/>
-        {
-          position.length === 0 ? (
-            <Fragment>
-              <Typography sx={{textAlign: 'center', color: 'white', fontWeight: 700}} variant="h6">
-                You need to enable your GeoLocation to see your current location
-              </Typography>
-              <br/>
-            </Fragment>
-          ): (
-            <Fragment>
-              <Typography sx={{textAlign: 'center', color: 'white', fontWeight: 700}} variant="h6">
-                Latitude: {position[0]}
-              </Typography>
-              <br/>
-              <Typography sx={{textAlign: 'center', color: 'white', fontWeight: 700}} variant="h6">
-                Longitude: {position[1]}
-              </Typography>
-              <br/>
-            </Fragment>
-          )
-        }
-       
-        <Typography sx={{textAlign: 'center', color: 'white', fontWeight: 700}} variant="h6">
-         {date}
-        </Typography>
-        <br/> */}
+
       <Box component="form" noValidate sx={{textAlign: 'center', m: 1, mb: 4}} onSubmit={handleSubmit}>
         <TextField label="Input Trip Id" type="number" variant="filled" sx={{m: 1}} required name="tripId" value={tripId} onChange={handleChange} />
         <TextField label="Start Latitude" type='number' variant="filled" sx={{m: 1}} required value={latitude} name="latitude" onChange={handleChange}/>

@@ -11,181 +11,37 @@
         "destination_longitude":-76.6176,
         "amount":981,
         "pickup_date_time":"2022-03-02T19:00:00.000Z"
-        },
-        {"load_id":434076692,
-            "origin_city":"GRIFTON",
-            "origin_state":"NC",
-            "origin_latitude":35.3726615906,
-            "origin_longitude":-77.4374694824,
-            "destination_city":"MILLERSBURG",
-            "destination_state":"PA",
-            "destination_latitude":40.5395278931,
-            "destination_longitude":-76.9608154297,
-            "amount":1688,
-            "pickup_date_time":"2022-03-04T12:00:00.000Z"},
-            {"load_id":434077295,
-                
-                "origin_city":"HARTFORD",
-                "origin_state":"CT",
-                "origin_latitude":41.7667541504,
-                "origin_longitude":-72.6729812622,
-                
-                "destination_city":"BRAINTREE",
-                "destination_state":"MA",
-                "destination_latitude":42.2199401855,
-                
-                "destination_longitude":-70.9959259033,
-                "amount":721,
-                "pickup_date_time":"2022-03-02T12:00:00.000Z"},
-                
-                {"load_id":434077563,
-                    "origin_city":"Muncy",
-                    "origin_state":"PA",
-                    "origin_latitude":41.199614,
-                    "origin_longitude":-76.786403,
-                    
-                    "destination_city":"Baltimore",
-                    "destination_state":"MD",
-                    "destination_latitude":39.270522,
-                    "destination_longitude":-76.626796,
-                    
-                    "amount":982,
-                    "pickup_date_time":"2022-03-02T18:00:00.000Z"},
-                    {"load_id":434077674,
-                        "origin_city":"PLYMOUTH",
-                        "origin_state":"NC",
-                        
-                    "origin_latitude":35.861656189,
-                    "origin_longitude":-76.747253418,
-                    "destination_city":"ALLENSVILLE",
-                    "destination_state":"PA",
-                    
-                    "destination_latitude":40.5359039307,
-                    "destination_longitude":-77.8169403076,
-                    "amount":1663,
-                    
-                    "pickup_date_time":"2022-03-04T08:00:00.000Z"},
-                    {"load_id":434082923,
-                        "origin_city":"Vancouver",
-                        
-                        "origin_state":"WA",
-                        "origin_latitude":45.636473,
-                        "origin_longitude":-122.672141,
-                        "destination_city":"Alliance",
-                        
-                        "destination_state":"OH",
-                        "destination_latitude":40.901821,
-                        "destination_longitude":-81.114288,
-                        "amount":1501,
-                        
-                        "pickup_date_time":"2022-03-02T18:00:00.000Z"},
-                        {"load_id":434082924,
-                            "origin_city":"Orting",
-                            "origin_state":"WA",
-                            
-                            "origin_latitude":47.099993,
-                            "origin_longitude":-122.20692,
-                            "destination_city":"Alliance",
-                            "destination_state":"OH",
-                            
-                            "destination_latitude":40.901821,
-                            "destination_longitude":-81.114288,
-                            "amount":1496,
-                            
-                            "pickup_date_time":"2022-03-02T11:00:00.000Z"},
-                            {"load_id":434087736,
-                                "origin_city":"LAKE CHARLES",
-                                
-                                "origin_state":"LA",
-                                "origin_latitude":30.227726,
-                                "origin_longitude":-93.214423,
-                                "destination_city":"BLUE RIDGE",
-                                
-                                "destination_state":"GA",
-                                "destination_latitude":34.862883,
-                                "destination_longitude":-84.321473,
-                                "amount":2097,
-                                
-                                "pickup_date_time":"2022-03-03T11:00:00.000Z"},
-                                {"load_id":434093021,
-                                    "origin_city":"ennis",
-                                    "origin_state":"TX",
-                                    
-                                    "origin_latitude":32.33139,
-                                    "origin_longitude":-96.621557,
-                                    "destination_city":"chattanooga",
-                                    
-                                    "destination_state":"TN",
-                                    "destination_latitude":35.045682,
-                                    "destination_longitude":-85.310027,
-                                    "amount":1611,
-                                    
-                                    "pickup_date_time":"2022-03-01T11:00:00.000Z"},
-                                    {"load_id":434093038,
-                                        "origin_city":"ennis",
-                                        
-                                        "origin_state":"TX",
-                                        "origin_latitude":32.33139,
-                                        "origin_longitude":-96.621557,
-                                        "destination_city":"purvis",
-                                        
-                                        "destination_state":"MS",
-                                        "destination_latitude":31.142412,
-                                        "destination_longitude":-89.403474,
-                                        "amount":1054,
-                                        
-                                        "pickup_date_time":"2022-03-01T12:00:00.000Z"},
-                                        {"load_id":434102979,
-                                            "origin_city":"grand rapids",
-                                            "origin_state":"MI",
-                                            
-                                            "origin_latitude":42.965068,
-                                            "origin_longitude":-85.672302,
-                                            "destination_city":"mcdonough",
-                                            "destination_state":"GA",
-                                            
-                                            "destination_latitude":33.448221,
-                                            "destination_longitude":-84.146842,
-                                            "amount":3117,
-                                            "pickup_date_time":"2022-02-28T12:00:00.000Z"},
-                                            
-                                            {"load_id":434102982,
-                                                "origin_city":"GRIFTON",
-                                                "origin_state":"NC",
-                                                "origin_latitude":35.3726615906,
-                                                
-                                                "origin_longitude":-77.4374694824,
-                                                "destination_city":"COATESVILLE",
-                                                "destination_state":"PA",
-                                                
-                                                "destination_latitude":39.9806518555,
-                                                "destination_longitude":-75.8301239014,
-                                                "amount":1484,
-                                                
-                                                "pickup_date_time":"2022-03-03T11:00:00.000Z"},
-                                                {"load_id":434103002,
-                                                    "origin_city":"PLYMOUTH",
-                                                    
-                                                    "origin_state":"NC",
-                                                    "origin_latitude":35.861656189,
-                                                    "origin_longitude":-76.747253418,
-                                                    
-                                                    "destination_city":"WASHINGTON",
-                                                    "destination_state":"GA",
-                                                    "destination_latitude":33.7367935181,
-                                                    
-                                            "destination_longitude":-82.7393112183,
-                                            "amount":1185,
-                                            "pickup_date_time":"2022-03-03T11:00:00.000Z"},
-                                            
-                                            {"load_id":434103003,
-                                                "origin_city":"GRIFTON",
-                                                "origin_state":"NC",
-                                                "origin_latitude":35.3726615906,
-                                                
-                                                "origin_longitude":-77.4374694824,
-                                                "destination_city":"EASTON","destination_state":"PA","destination_latitude":40.6944503784,
-                                                "destination_longitude":-75.2149505615,"amount":1696,
-            "pickup_date_time":"2022-03-03T09:00:00.000Z"}]
+    },
+
+    {"load_id":434133070,"origin_city":"PHILADELPHIA","origin_state":"PA","origin_latitude":39.953603,"origin_longitude":-75.168424,"destination_city":"LOCK HAVEN","destination_state":"PA","destination_latitude":41.137015,"destination_longitude":-77.44692,"amount":1140,"pickup_date_time":"2022-03-03T09:00:00.000Z"}
+    ,
+    {   
+        "load_id":434076692,
+        "origin_city":"GRIFTON",
+        "origin_state":"NC",
+        "origin_latitude":35.3726615906,
+        "origin_longitude":-77.4374694824,
+        "destination_city":"MILLERSBURG",
+        "destination_state":"PA",
+        "destination_latitude":40.5395278931,
+        "destination_longitude":-76.9608154297,
+        "amount":1688,
+        "pickup_date_time":"2022-03-04T12:00:00.000Z"
+    },
+    {
+        "load_id":434077674,
+        "origin_latitude":40.5359039307,
+        "origin_longitude":-77.8169403076,
+        "origin_city":"ALLENSVILLE",
+        "origin_state":"PA",
+        "destination_city":"PLYMOUTH",
+        "destination_state":"NC",
+        "destination_latitude":35.861656189,
+        "destination_longitude":-76.747253418,
+        "amount":1663,  
+        "pickup_date_time":"2022-03-04T08:00:00.000Z"
+    }
+        
+]
 
 

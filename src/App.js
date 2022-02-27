@@ -53,6 +53,7 @@ function App() {
     iconSize: [35, 35]
   })
 
+
   // let handleFile = (e) => {
   //   console.log(e.target.files[0])
   //   if (e.target.files[0]){
@@ -170,9 +171,92 @@ function App() {
       "start_time": startTime.toISOString(),
       "max_destination_time": maxDestinationTime.toISOString()
     }
-
    
     setLoading(true)
+
+
+    // var result = Module.ccall(
+    //   'myFunction',  // name of C function
+    //   null,  // return type
+    //   null,  // argument types
+    //   null  // arguments
+    // );
+
+ 
+
+    // fetch("a.out.wasm")
+    // .then((response)=> {
+    //   console.log(response)
+    //   response.arrayBuffer()
+    // })
+    // .then((bits) => {
+    //   console.log(bits)
+    //   WebAssembly.compile(bits)
+    // })
+    // .then((obj) => {
+    //   console.log(obj.instance.exports.add(1, 2))
+    // })
+
+
+      fetch('external')
+      .then((wasm) => {
+        console.log(wasm)
+        console.log(wasm.doubler(2))
+      })
+      .catch(err => {
+      console.error(`Unexpected error in loadWasm. [Message: ${err.message}]`);
+      })
+
+
+    // .then((module) => {return new WebAssembly.Instance(module)})
+    // .then((instance) => {
+    //   add = instance.exports._Z3addii;
+    //   console.log(add(1,2))
+    // })
+
+
+//     function loadWebAssembly(filename, imports) {
+//       // Fetch the file and compile it
+//       return fetch(filename)
+//         .then(response => response.arrayBuffer())
+//         .then(buffer => WebAssembly.compile(buffer))
+//         .then(module => {
+//           // Create the imports for the module, including the
+//           // standard dynamic library imports
+//           imports = imports || {};
+//           imports.env = imports.env || {};
+//           imports.env.memoryBase = imports.env.memoryBase || 0;
+//           imports.env.tableBase = imports.env.tableBase || 0;
+//           if (!imports.env.memory) {
+//             imports.env.memory = new WebAssembly.Memory({ initial: 256 });
+//           }
+//           if (!imports.env.table) {
+//             imports.env.table = new WebAssembly.Table({ initial: 0, element: 'anyfunc' });
+//           }
+//           // Create the instance.
+//           return new WebAssembly.Instance(module, imports);
+//         });
+//     }
+
+//     var importObject = {
+//       env: {
+//       'memoryBase': 0,
+//       'tableBase': 0,
+//       'memory': new WebAssembly.Memory({initial: 256}),
+//       'table': new WebAssembly.Table({initial: 256, element: 'anyfunc'}),
+//       abort: alert,
+//       }
+//  }
+
+//     // Main part of this example, loads the module and uses it.
+//     loadWebAssembly('hello_world.wasm')
+//       .then(instance => {
+//         var exports = instance.exports; // the exports of that instance
+//         var doubler = exports._doubler; // the "doubler" function (note "_" prefix)
+//         // now we are ready, set up the button so the user can run the code
+//         console.log(doubler(2))
+//       }
+//     );
 
     setTimeout(() => {
       setInfo(data)
@@ -193,7 +277,7 @@ function App() {
       </Backdrop>
 
       <AppBar sx={{p: 1.6, backgroundColor: 'orange', position: 'sticky' }}>
-        <Typography variant="h6" sx={{textAlign: 'center', color: 'white', fontWeight: 800}}>Honk</Typography>
+        <Typography variant="h6" sx={{textAlign: 'center', color: 'white', fontWeight: 800}}>Honk Honk</Typography>
         <Tooltip title="Your Trip">
           <IconButton
             sx={{mr: 2, borderRadius: '25px', mt: 0.5, position: 'absolute', right: '0', top: '0'}}
@@ -267,8 +351,6 @@ function App() {
             Find Route
         </Button>
       </Box>
-
-   
       </AppBar>
     </Slide>
    
@@ -299,13 +381,13 @@ function App() {
                 <Marker position={[element["origin_latitude"], element["origin_longitude"]]} color="blue" icon={icon}>
                   <Popup>
                     <i>Start Point</i><br/>
-                    <b>Origin</b><br/>{element["origin_city"]},  {element["origin_state"]}
+                    <b>Origin ({i+1})</b><br/>{element["origin_city"]},  {element["origin_state"]}
                   </Popup>
                 </Marker>
               ): (
                 <Marker position={[element["origin_latitude"], element["origin_longitude"]]} color="blue">
                   <Popup>
-                    <b>Origin</b><br/>{element["origin_city"]},  {element["origin_state"]}
+                    <b>Origin ({i+1})</b><br/>{element["origin_city"]},  {element["origin_state"]}
                   </Popup>
                 </Marker>
               )
@@ -323,13 +405,13 @@ function App() {
                 <Marker position={[element["destination_latitude"], element["destination_longitude"]]} icon={icon}>
                   <Popup>
                   <i>End Point</i><br/>
-                  <b>Destination</b><br/>{element["destination_city"]},  {element["destination_state"]}
+                  <b>Destination ({i+1})</b><br/>{element["destination_city"]},  {element["destination_state"]}
                   </Popup>
                 </Marker>
               ): (
                 <Marker position={[element["destination_latitude"], element["destination_longitude"]]}>
                   <Popup>
-                  <b>Destination</b><br/>{element["destination_city"]},  {element["destination_state"]}
+                  <b>Destination ({i+1})</b><br/>{element["destination_city"]},  {element["destination_state"]}
                   </Popup>
                 </Marker>
               )
